@@ -1,11 +1,23 @@
 import "./assets/styles.css";
+import home from "./home.js";
 
 (() => {
+  const header = document.querySelector('.header');
   const content = document.querySelector('.content');
 
-  const description = document.createElement('div');
-  description.classList = 'content-desc'
-  description.textContent = 'Forno is a Helsinki-based pizzeria where artisan craftsmanship meets premium ingredients.\nOur pizzas are made with a slow-fermented, flavorful dough and topped with the finest locally sourced ingredients.'
+  const pages = { home };
 
-  content.appendChild(description);
+  let currentPage = home;
+  content.appendChild(currentPage());
+  
+  header.addEventListener('click', (e) => {
+    if (!e.target.matches('button')) return;
+
+    const pageName = e.target.textContent.toLowerCase();
+    if (pageName === currentPage) return;
+
+    content.innerHTML = '';
+    content.appendChild(pages[pageName]());
+    currentPage = pageName;
+  });
 })();
