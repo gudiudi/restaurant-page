@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./Poppins-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   height: 100vh;
   box-sizing: border-box;
@@ -7,6 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -38,4 +46,8 @@ p {
 
 .content {
   white-space: pre-line;
+}
+
+.logo {
+  background: url('./logo.png');
 }
