@@ -9,6 +9,14 @@ body {
   align-items: center;
 }
 
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .header {
   position: absolute;
   top: 30px;
@@ -30,5 +38,4 @@ body {
 
 .content {
   white-space: pre-line;
-  text-align: center;
 }

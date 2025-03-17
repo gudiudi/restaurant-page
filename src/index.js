@@ -1,11 +1,12 @@
 import "./assets/styles.css";
 import home from "./home.js";
+import menu from "./menu.js";
 
 (() => {
   const header = document.querySelector('.header');
   const content = document.querySelector('.content');
 
-  const pages = { home };
+  const pages = { home, menu };
 
   let currentPage = home;
   content.appendChild(currentPage());
