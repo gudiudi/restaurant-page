@@ -1,12 +1,13 @@
 import "./assets/styles.css";
 import home from "./home.js";
 import menu from "./menu.js";
+import contact from "./contact.js";
 
 (() => {
   const header = document.querySelector('.header');
   const content = document.querySelector('.content');
 
-  const pages = { home, menu };
+  const pages = { home, menu, contact };
 
   let currentPage = home;
   content.appendChild(currentPage());

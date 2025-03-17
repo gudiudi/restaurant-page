@@ -28,12 +28,12 @@ export default function menu() {
   ]
 
   const div = document.createElement('div');
-  div.classList = 'menu'; 
+  div.className = 'menu'; 
   div.style = 'text-align: left; display: flex; flex-direction: column; gap: 1rem'
 
   for (let item of items) {
     const menuItem = document.createElement('div');
-    menuItem.classList = 'menu-item';
+    menuItem.className = 'menu-item';
 
     const itemName = document.createElement('h2');    
     itemName.textContent = `${item.name} €${item.price}`;
