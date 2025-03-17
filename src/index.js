@@ -14,8 +14,10 @@ import home from "./home.js";
     if (!e.target.matches('button')) return;
 
     const pageName = e.target.textContent.toLowerCase();
-    if (pageName === currentPage) return;
-
+    if (
+      pageName === currentPage || 
+      !pages.hasOwnProperty(pageName)
+    ) return;
     content.innerHTML = '';
     content.appendChild(pages[pageName]());
     currentPage = pageName;
